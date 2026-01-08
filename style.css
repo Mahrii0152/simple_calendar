@@ -1,0 +1,86 @@
+/* Container geral */
+.calendar {
+  width: 260px;
+  background: #F7F4F1;
+  border-radius: 18px;
+  padding: 12px;
+  font-family: "Poppins", sans-serif;
+  color: #8C6954;
+}
+
+/* Cabeçalho */
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.calendar-header h2 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Botões */
+.calendar-header button {
+  background: #D0A595;
+  border: none;
+  color: white;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Dias da semana */
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-size: 12px;
+  color: #B8A097;
+  margin-bottom: 6px;
+}
+
+/* Grid dos dias */
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+/* Cada dia */
+.day {
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  cursor: pointer;
+  border-radius: 50%;
+  color: #8C6954;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* Hover */
+.day:hover {
+  background: #EAD6CB;
+}
+
+/* Dia atual */
+.day.today {
+  border: 2px solid #D0A595;
+  font-weight: 600;
+}
+
+/* Dia selecionado */
+.day.selected {
+  background: #D0A595;
+  color: white;
+}
+
+/* Dias vazios (início do mês) */
+.day.empty {
+  cursor: default;
+}
