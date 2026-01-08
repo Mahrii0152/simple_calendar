@@ -1,86 +1,91 @@
-/* Container geral */
-.calendar {
-  width: 260px;
-  background: #F7F4F1;
-  border-radius: 18px;
-  padding: 12px;
-  font-family: "Poppins", sans-serif;
-  color: #8C6954;
+:root {
+  --bg: #F7F4F1;
+  --card: #ffffff;
+  --accent: #D0A595;
+  --hover: #EAD6CB;
+  --text: #8C6954;
 }
 
-/* Cabeçalho */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: transparent;
+  font-family: "Poppins", sans-serif;
+}
+
+.calendar {
+  width: 260px;
+  background: var(--bg);
+  border-radius: 20px;
+  padding: 12px;
+  color: var(--text);
+}
+
 .calendar-header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  margin-bottom: 12px;
+  align-items: center;
+  margin-bottom: 8px;
 }
 
 .calendar-header h2 {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
 }
 
-/* Botões */
 .calendar-header button {
-  background: #D0A595;
+  background: var(--accent);
   border: none;
   color: white;
   width: 26px;
   height: 26px;
   border-radius: 50%;
   cursor: pointer;
-  font-size: 14px;
 }
 
-/* Dias da semana */
 .weekdays {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
+  font-size: 10px;
   text-align: center;
-  font-size: 12px;
-  color: #B8A097;
   margin-bottom: 6px;
+  color: #B8A097;
 }
 
-/* Grid dos dias */
 .days {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 4px;
 }
 
-/* Cada dia */
 .day {
   height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 13px;
-  cursor: pointer;
+  font-size: 12px;
   border-radius: 50%;
-  color: #8C6954;
-  transition: background 0.2s ease, color 0.2s ease;
+  cursor: pointer;
 }
 
-/* Hover */
 .day:hover {
-  background: #EAD6CB;
+  background: var(--hover);
 }
 
-/* Dia atual */
 .day.today {
-  border: 2px solid #D0A595;
+  border: 2px solid var(--accent);
   font-weight: 600;
 }
 
-/* Dia selecionado */
 .day.selected {
-  background: #D0A595;
+  background: var(--accent);
   color: white;
 }
 
-/* Dias vazios (início do mês) */
 .day.empty {
   cursor: default;
+  background: none;
 }
